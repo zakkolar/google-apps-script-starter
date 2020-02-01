@@ -46,7 +46,7 @@ To get around this, Webpack is configured to use [`gas-webpack-plugin`](https://
     
 When `gas-webpack-plugin` detects this global assignment, it will automatically generate a top level function declaration so that this function is accessible externally.
 
-**Note**: The plugin parses files as plain text when looking for items attached to the `global` object rather than evaluating them as JavaScript. This means that you cannot programmatically attach functions to the global object.
+**Note**: `gas-webpack-plugin` parses files as plain text when looking for items attached to the `global` object rather than evaluating them as JavaScript. This means that you cannot programmatically attach functions to the global object.
 
 ## Client development
 
