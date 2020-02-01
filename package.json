@@ -13,17 +13,12 @@
   },
   "scripts": {
     "test": "mocha -r ts-node/register src/server/**/*.spec.ts",
-    "watch": "npm-watch",
-    "build:server": "node compile-server.js",
-    "build:ui": "webpack --mode production",
-    "build": "npm run build:server && npm run build:ui",
-    "deploy": "clasp push",
-    "dev": "npm run build && npm run deploy"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "npm-watch": "^0.6.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -35,8 +30,8 @@
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.0.0",
-    "fs-extra": "^8.0.0",
     "gas-webpack-plugin": "^1.0.2",
     "glob": "^7.1.4",
     "html-webpack-inline-source-plugin": "0.0.10",
