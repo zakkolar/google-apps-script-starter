@@ -119,6 +119,7 @@ const serverConfig =(mode) => {
     return {
         entry: './src/server/Main.ts',
         watch: mode === 'development',
+        devtool: false,
         module: {
             rules: [
                 {
