@@ -63,6 +63,7 @@ const clientConfig = (mode)=> {
     return {
         entry: entry,
         watch: mode === 'development',
+        devtool: false,
         output: {
             path: UiOutputPath
         },
